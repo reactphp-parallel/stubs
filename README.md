@@ -1,2 +1,1 @@
-# stubs
-Stubs (for PHPstan)
+# Stubs (for PHPstan)

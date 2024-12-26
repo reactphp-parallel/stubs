@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+namespace parallel\Events;
+
+use parallel\Channel;
+use parallel\Future;
+
+/** @template T */
+final class Event
+{
+    /**
+     * Shall be one of Event\Type constants
+     */
+    public int $type;
+
+    /**
+     * Shall be the source of the event (target name)
+     */
+    public string $source;
+
+    /**
+     * Shall be either Future or Channel
+     *
+     * @var Future<T>|Channel<T>
+     */
+    public Future|Channel $object;
+
+    /**
+     * Shall be set for Read/Error events
+     *
+     * @var T
+     */
+    public $value;
+}
