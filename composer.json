@@ -14,7 +14,7 @@
         "ext-parallel": "*"
     },
     "require-dev": {
-        "wyrihaximus/async-test-utilities": "^5 || ^7.2"
+        "wyrihaximus/async-test-utilities": "^5 || ^7.2 || ^8.0"
     },
     "config": {
         "allow-plugins": {
