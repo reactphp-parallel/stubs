@@ -1,0 +1,6 @@
+parameters:
+	stubFiles:
+		- stubs/Channel.stub
+		- stubs/Event.stub
+		- stubs/functions.stub
+		- stubs/Future.stub

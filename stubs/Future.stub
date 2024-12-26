@@ -1,12 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace parallel;
 
 use Throwable;
 
-/** @template T */
+/**
+ * @template T
+ */
 final class Future
 {
     /* Resolution */
@@ -22,25 +22,21 @@ final class Future
      * @throws Future\Error\Foreign if task raised an unrecognized uncaught exception.
      * @throws Throwable Shall rethrow \Throwable uncaught in task
      */
-    public function value()
-    {
-    }
+    public function value() {}
 
     /* State */
 
     /**
      * Shall indicate if the task is completed
+     * @return bool
      */
-    public function done(): bool
-    {
-    }
+    public function done(): bool {}
 
     /**
      * Shall indicate if the task was cancelled
+     * @return bool
      */
-    public function cancelled(): bool
-    {
-    }
+    public function cancelled(): bool {}
 
     /* Cancellation */
 
@@ -49,10 +45,10 @@ final class Future
      * Note: If task is running, it will be interrupted.
      * Warning: Internal function calls in progress cannot be interrupted.
      *
+     * @return bool
+     *
      * @throws Future\Error\Killed if \parallel\Runtime executing task was killed.
      * @throws Future\Error\Cancelled if task was already cancelled.
      */
-    public function cancel(): bool
-    {
-    }
+    public function cancel(): bool {}
 }
