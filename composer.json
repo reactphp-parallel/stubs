@@ -1,5 +1,6 @@
 {
     "name": "react-parallel/stubs",
+    "type": "phpstan-extension",
     "description": "\ud83e\udecf Stubs (for PHPstan)",
     "license": "MIT",
     "authors": [
@@ -27,6 +28,13 @@
             "php": "8.1.13"
         },
         "sort-packages": true
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
     },
     "scripts": {
         "post-install-cmd": [
