@@ -9,6 +9,7 @@ parameters:
 	stubFiles:
 		- ../../stubs/Event.stub
 		- ../../stubs/Future.stub
+		- ../../stubs/functions.stub
 		- ../../stubs/Channel.stub
 
 includes:
