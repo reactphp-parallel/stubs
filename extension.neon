@@ -4,3 +4,4 @@ parameters:
 		- stubs/Event.stub
 		- stubs/functions.stub
 		- stubs/Future.stub
+		- stubs/Runtime.stub
