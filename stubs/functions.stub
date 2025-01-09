@@ -5,9 +5,28 @@ namespace parallel;
 use Closure;
 
 /**
- * @param (Closure():T)|(Closure():void) $task
- * @param array<mixed>                   $argv
+ * @param (Closure():T)|(Closure(A0):T)|(Closure(A0,A1):T)|(Closure(A0,A1,A2):T)|(Closure(A0,A1,A2,A3):T)|(Closure(A0,A1,A2,A3,A4):T)|(Closure():void)|(Closure(A0):void)|(Closure(A0,A1):void)|(Closure(A0,A1,A2):void)|(Closure(A0,A1,A2,A3):void)|(Closure(A0,A1,A2,A3,A4):void) $task
+ * @param array{}|array{A0}|array{A0,A1}|array{A0,A1,A2}|array{A0,A1,A2,A3}|array{A0,A1,A2,A3,A4}                                                                                                                                                                                   $argv
+ *
+ * @return (
+ *      $task is (Closure():T) ? Future<T> : (
+ *          $task is (Closure(A0):T) ? Future<T> : (
+ *              $task is (Closure(A0,A1):T) ? Future<T> : (
+ *                  $task is (Closure(A0,A1,A2):T) ? Future<T> : (
+ *                      $task is (Closure(A0,A1,A2,A3):T) ? Future<T> : (
+ *                          $task is (Closure(A0,A1,A2,A3,A4):T) ? Future<T> : null
+ *                      )
+ *                  )
+ *              )
+ *          )
+ *      )
+ * )
+ *
  * @template T
- * @return ($task is (Closure():T) ? Future<T> : null)
+ * @template A0 (any number of function arguments, see https://github.com/phpstan/phpstan/issues/8214)
+ * @template A1
+ * @template A2
+ * @template A3
+ * @template A4
  */
 function run(Closure $task, array $argv = null): ?Future {}
