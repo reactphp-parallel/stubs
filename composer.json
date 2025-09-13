@@ -11,21 +11,23 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.4",
         "ext-parallel": "*"
     },
     "require-dev": {
-        "wyrihaximus/async-test-utilities": "^5 || ^7.2"
+        "wyrihaximus/async-test-utilities": "^10.0.0"
     },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "ergebnis/composer-normalize": true,
             "icanhazstring/composer-unused": true,
-            "infection/extension-installer": true
+            "infection/extension-installer": true,
+            "phpstan/extension-installer": true,
+            "wyrihaximus/test-utilities": true
         },
         "platform": {
-            "php": "8.1.13"
+            "php": "8.4.13"
         },
         "sort-packages": true
     },
