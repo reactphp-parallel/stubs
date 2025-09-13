@@ -12,6 +12,3 @@ parameters:
 		- ../../stubs/functions.stub
 		- ../../stubs/Future.stub
 		- ../../stubs/Runtime.stub
-
-includes:
-	- ../../vendor/wyrihaximus/async-test-utilities/rules.neon
