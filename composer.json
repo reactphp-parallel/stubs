@@ -1,49 +1,60 @@
 {
-    "name": "react-parallel/stubs",
-    "description": "\ud83e\udecf Stubs (for PHPstan)",
-    "license": "MIT",
-    "type": "phpstan-extension",
-    "authors": [
-        {
-            "name": "Cees-Jan Kiewiet",
-            "email": "ceesjank@gmail.com",
-            "homepage": "http://wyrihaximus.net/"
-        }
-    ],
-    "require": {
-        "php": "^8.4",
-        "ext-parallel": "*"
-    },
-    "require-dev": {
-        "wyrihaximus/async-test-utilities": "^10.0.0"
-    },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "ergebnis/composer-normalize": true,
-            "icanhazstring/composer-unused": true,
-            "infection/extension-installer": true,
-            "phpstan/extension-installer": true,
-            "wyrihaximus/test-utilities": true
-        },
-        "platform": {
-            "php": "8.4.13"
-        },
-        "sort-packages": true
-    },
-    "extra": {
-        "phpstan": {
-            "includes": [
-                "extension.neon"
-            ]
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "composer normalize"
-        ],
-        "post-update-cmd": [
-            "composer normalize"
-        ]
+  "name": "react-parallel/stubs",
+  "description": "\ud83e\udecf Stubs (for PHPstan)",
+  "license": "MIT",
+  "type": "phpstan-extension",
+  "authors": [
+    {
+      "name": "Cees-Jan Kiewiet",
+      "email": "ceesjank@gmail.com",
+      "homepage": "http://wyrihaximus.net/"
     }
+  ],
+  "require": {
+    "php": "^8.4",
+    "ext-parallel": "*"
+  },
+  "require-dev": {
+    "wyrihaximus/async-test-utilities": "^13.1.0",
+    "wyrihaximus/makefiles": "^0.11.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
+      "icanhazstring/composer-unused": true,
+      "infection/extension-installer": true,
+      "phpstan/extension-installer": true,
+      "wyrihaximus/makefiles": true,
+      "wyrihaximus/test-utilities": true
+    },
+    "platform": {
+      "php": "8.4.13"
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "phpstan": {
+      "includes": [
+        "extension.neon"
+      ]
+    },
+    "wyrihaximus": {
+      "supported-features": {
+        "code-style": false,
+        "composer-dependency-checkers": false,
+        "static-analysis": false,
+        "unit-tests": false,
+        "zts": true
+      }
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "make on-install-or-update || true"
+    ],
+    "post-update-cmd": [
+      "make on-install-or-update || true"
+    ]
+  }
 }
