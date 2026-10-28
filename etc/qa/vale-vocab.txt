@@ -25,6 +25,7 @@ BadFunctionCallException
 BadMethodCallException
 BcMath
 BoolValue
+Bootstrap
 BrokenRandomEngineError
 BytesValue
 CASE_FOLD
@@ -38,6 +39,7 @@ CachingIterator
 Call
 CallCredentials
 CallbackFilterIterator
+Cancelled
 Cardinality
 Cees-Jan
 Channel
@@ -45,6 +47,7 @@ ChannelCredentials
 CharacterData
 ChildNode
 ClassLoader
+Closed
 ClosedGeneratorException
 Closure
 Collator
@@ -140,7 +143,9 @@ EventHttpRequest
 EventListener
 EventSslContext
 EventUtil
+Events
 Exception
+Existence
 FFI
 FLOAT32_MAX
 FLOAT32_MIN
@@ -157,6 +162,8 @@ Filesystem
 FilesystemIterator
 FilterIterator
 FloatValue
+Foreign
+Future
 GHA
 GMP
 GPBEmpty
@@ -185,10 +192,17 @@ INT64_MAX
 INT64_MIN
 INT8_MAX
 INT8_MIN
+IllegalFunction
+IllegalInstruction
+IllegalParameter
+IllegalReturn
+IllegalValue
+IllegalVariable
 Implementation
 InfectionPHP
 InfiniteIterator
 InflateContext
+Input
 Int32Value
 Int64Value
 Internal
@@ -214,6 +228,7 @@ JetBrains
 JsonException
 JsonSerializable
 Kiewiet
+Killed
 Kind
 LengthException
 LibXMLError
@@ -262,6 +277,7 @@ NullValue
 Number
 NumberFormatter
 OTEL
+Object
 OneofDescriptor
 OpenSSLAsymmetricKey
 OpenSSLCertificate
@@ -355,6 +371,7 @@ Retriable
 ReturnTypeWillChange
 Roave
 RoundingMode
+Runtime
 RuntimeException
 RxPHP
 SECONDS_PER_DAY
@@ -403,9 +420,11 @@ StreamBucket
 StringValue
 Stringable
 Struct
+Sync
 Syntax
 Text
 Throwable
+Timeout
 Timestamp
 Timeval
 TokenList
@@ -444,6 +463,7 @@ UVTimer
 UVTty
 UVUdp
 UVWork
+Unavailable
 UnderflowException
 UnexpectedValueException
 UnhandledMatchError
@@ -792,6 +812,7 @@ bindec
 bindtextdomain
 bool
 boolval
+bootstrap
 bounded
 box
 boyscout
